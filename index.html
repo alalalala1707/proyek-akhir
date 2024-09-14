@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="wrapper">
+        <a href="#" class="brand-name">NOTES APP</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrapper">
+        <div class="container">
+          <section>
+            <note-input></note-input>
+          </section>
+          <section>
+            <h2 tabindex="0" class="title-section">List Notes</h2>
+            <hr />
+            <note-list
+              id="activeNotesList"
+              data-type="unarchived"
+              class="note-list"
+            ></note-list>
+          </section>
+          <section>
+            <h2 tabindex="0" class="title-section">Arsip</h2>
+            <hr />
+            <note-list
+              id="archivedNotesList"
+              data-type="archived"
+              class="note-list"
+            ></note-list>
+          </section>
+        </div>
+      </div>
+      <div id="loading" style="display: none">Loading...</div>
+    </main>
+
+    <footer>
+      <div class="wrapper">
+        <p class="foot-information">
+          Syahla Alfiyyah Salsabila | Dicoding Indonesia
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

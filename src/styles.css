@@ -1,0 +1,175 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.wrapper {
+  padding: 32px 24px;
+}
+
+.container {
+  display: grid;
+  gap: 40px 20px;
+}
+
+.title-section {
+  margin: 16px 0 24px;
+  text-align: center;
+  font-size: 2rem;
+  color: #694f8e;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  background-color: #b692c2;
+  color: beige;
+  padding: 16px 0;
+}
+
+header .wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.brand-name {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #ffdfd6;
+}
+
+/* Note list */
+.note-list {
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px 32px;
+}
+
+/* Note item */
+.note-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #fff;
+  transition:
+    transform 150ms ease-in,
+    box-shadow 150ms ease-in;
+}
+
+.note-item:hover,
+.note-item:focus-visible {
+  transform: scale(1.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.note-item .note__description {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.note-item .note__example {
+  text-align: center;
+}
+
+.note-item .note__example-img {
+  width: 75%;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+/* Archive specific styles */
+.note-item.archive-note {
+  background-color: #f0e68c;
+  border: 1px solid #daa520;
+}
+
+.note-item.archive-note:hover,
+.note-item.archive-note:focus-visible {
+  transform: scale(1.05);
+  box-shadow: 0 2px 4px rgba(218, 165, 32, 0.2);
+}
+
+.archive-note-button {
+  background-color: #8b0000;
+  color: #fff;
+}
+
+.unarchive-note-button {
+  background-color: #32cd32;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  background-color: #b692c2;
+  color: #ffdfd6;
+  padding: 16px 0;
+  text-align: center;
+}
+
+/* Note Input */
+note-input {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+note-input > .input_section > h2 {
+  color: #da7297;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 28px;
+}
+
+#bodySubmit {
+  background-color: #b1afff;
+  border-radius: 0.3rem;
+  padding: 0.7rem 1.3rem;
+  border: 1px solid #333;
+  color: #af47d2;
+}
+
+#inputNote {
+  margin-top: 8px 0;
+  border-spacing: 0.5em;
+}
+
+#inputNoteBody {
+  resize: vertical;
+  width: 300px;
+  height: 100px;
+}
+
+#loading {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 35px;
+  font-weight: bold;
+  color: #9c2525;
+  background-color: #f9f9f9;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .note-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
